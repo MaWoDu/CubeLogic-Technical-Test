@@ -23,10 +23,10 @@ public class SuspiciousOrderDetector {
     }
 
     private boolean isPriceWithinThresholdForBuy(Trade trade, Order order, double threshold) {
-        return order.price() <= trade.price() + threshold;
+        return order.price() - trade.price() >=  threshold;
     }
 
     private boolean isPriceWithinThresholdForSell(Trade trade, Order order, double threshold) {
-        return order.price() >= trade.price() - threshold;
+        return trade.price() - order.price() >= threshold;
     }
 }
