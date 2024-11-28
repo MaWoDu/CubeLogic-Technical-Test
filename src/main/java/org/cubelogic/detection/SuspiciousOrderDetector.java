@@ -1,3 +1,8 @@
+package org.cubelogic.detection;
+
+import org.cubelogic.trading.Order;
+import org.cubelogic.trading.Trade;
+
 import java.util.List;
 
 public class SuspiciousOrderDetector {

@@ -19,7 +19,7 @@ If you find something missing in the task description, make reasonable assumptio
 Define and implement one Interface, which has only one method: 
 it takes a list of trades and a list of orders, and outputs those of them which it finds suspicious.
 
-Trades and orders both have following fields: long id, double price (it may go negative on our marketplace), double volume, Side side (buy or sell), LocalDateTime timestamp.
+Trades and orders both have following fields: long id, double price (it may go negative on our marketplace), double volume, org.cubelogic.trading.Side side (buy or sell), LocalDateTime timestamp.
 
 You find trades and orders suspicious if you see the following pattern in the trader's behaviour:
 - in a time, window of 30 minutes before the trade there were placed order(s) of an opposite side.
@@ -31,14 +31,14 @@ I.e. we are trying to catch that the trader was attempting to make the market mo
 ## Requirements & Technical Review
 
 ```
-Order: intention/request to buy or sell something at a specific price (Has a future intent)
-Trade: actual transaction that has occurred when orders are matched (Completed transaction)
+org.cubelogic.trading.Order: intention/request to buy or sell something at a specific price (Has a future intent)
+org.cubelogic.trading.Trade: actual transaction that has occurred when orders are matched (Completed transaction)
 
 In: list<trades>, list<order>
 out: list<trades> # flagged ones 
 
-trades/orders: long id, double price, double volume, Side side, LocalDateTime timestamp.
-Side: Buy/Sell
+trades/orders: long id, double price, double volume, org.cubelogic.trading.Side side, LocalDateTime timestamp.
+org.cubelogic.trading.Side: Buy/Sell
 
 suspicions:
 - looking at orders 30 minutes before a trade

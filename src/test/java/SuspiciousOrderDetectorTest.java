@@ -1,3 +1,7 @@
+import org.cubelogic.detection.SuspiciousOrderDetector;
+import org.cubelogic.trading.Order;
+import org.cubelogic.trading.Side;
+import org.cubelogic.trading.Trade;
 import org.junit.jupiter.api.BeforeEach;
 
 import org.junit.jupiter.api.Test;

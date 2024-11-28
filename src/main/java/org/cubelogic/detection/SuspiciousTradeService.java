@@ -1,3 +1,10 @@
+package org.cubelogic.detection;
+
+import org.cubelogic.trading.Order;
+import org.cubelogic.trading.Trade;
+import org.cubelogic.trading.TradeOrderMatch;
+import org.cubelogic.trading.TradeOrderMatcher;
+
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;

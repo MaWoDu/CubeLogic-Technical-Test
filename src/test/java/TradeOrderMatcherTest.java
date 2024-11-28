@@ -1,5 +1,6 @@
 import static org.assertj.core.api.Assertions.*;
 
+import org.cubelogic.trading.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
