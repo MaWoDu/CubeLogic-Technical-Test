@@ -1,4 +1,5 @@
 import java.time.LocalDateTime;
+import java.time.temporal.Temporal;
 
 public class Trade {
     private final long id;
@@ -22,5 +23,13 @@ public class Trade {
 
     public double price() {
         return price;
+    }
+
+    public Temporal timestamp() {
+        return tradeTime;
+    }
+
+    public long id() {
+        return id;
     }
 }
